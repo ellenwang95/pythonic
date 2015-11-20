@@ -1,0 +1,13 @@
+http://flask.pocoo.org/docs/0.10/quickstart/
+
+http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+https://exploreflask.com/organizing.html
+
+http://docs.python-guide.org/en/latest/
+
+http://codeplanet.io/how-to-make-a-single-page-website/
+
+http://tutorialzine.com/2010/02/html5-css3-website-template/
+
+used: http://templated.co/spatial
