@@ -1,44 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+	<!-- css includes -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/jquery.fullPage.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/examples.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/pythonic.css') }}">
+	
 	<title>Pythonic</title>
+
+	<!-- javascript includes for fullpage.js -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.slimscroll.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.fullPage.js') }}"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			menu: '#menu',
+			anchors: ['home', 'about', 'start'],
+			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+			autoScrolling: false
+		});
+	});
+	</script>
 
 </head>
 	
 <body>
-	<section id="wrap">
+	<nav>
+		<ul id="menu">
+			<li data-menuanchor="home" class="active"><a href="#home">Pythonic</a></li>
+			<li data-menuanchor="about"><a href="#about">About</a></li>
+			<li data-menuanchor="start"><a href="#start">Get Started</a></li>
+		</ul>
+	</nav>
 
-		<header>
-			<nav>
-				<div id="test">Yo.</div>
-			</nav>
-		</header>
-
-		<section id="home">
-			<!-- main pythonic page -->
+	<div id="fullpage">
+		<section class="section" id="home-section">
+			<div class="intro">
+				<h1>Normal scrolling</h1>
+				<p>With a linked menu</p>
+			</div>
 		</section>
-
-		<section id="about">
-			<!-- about stuff / how it works -->
-		</section> <!-- close #about -->
-
-		<section id="start">
-			<!-- get started! actual app -->
-		</section> <!-- close #start -->
-
-		<footer>
-			<!-- copyright stuff? -->
-		</footer>
-
-	</section> 	<!-- close #page -->
-
-<!-- javascript includes -->
-
+		<section class="section" id="about-section">
+			<div class="intro">
+				<h1>URL get updated (#)</h1>
+				<p>
+					Easy to bookmark and share
+				</p>
+			</div>
+		</section>
+		<section class="section" id="start-section">
+			<div class="intro">
+				<h1>Just use </h1>
+				<p>autoScrolling:false</p>
+			</div>
+		</section>
+	</div>
 
 </body>
-
-
-
-
 </html>
