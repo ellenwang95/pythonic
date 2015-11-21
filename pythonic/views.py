@@ -1,5 +1,5 @@
 from pythonic import app
-from flask import render_template
+from flask import render_template, url_for
 
 @app.route('/')
 @app.route('/index')

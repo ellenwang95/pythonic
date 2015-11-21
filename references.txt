@@ -11,3 +11,9 @@ http://codeplanet.io/how-to-make-a-single-page-website/
 http://tutorialzine.com/2010/02/html5-css3-website-template/
 
 used: http://templated.co/spatial
+
+http://alvarotrigo.com/fullPage/
+
+http://flask.pocoo.org/docs/0.10/patterns/templateinheritance/#template-inheritance
+
+http://www.styleshout.com/free-templates/woo/
