@@ -3,23 +3,11 @@
 <head>
 	<!-- css includes -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/jquery.fullPage.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/codeflask.css') }} ">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/prism.min.css') }} ">
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/examples.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/reset.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/pythonic.css') }}">
 	
 	<title>Pythonic</title>
-
-	<style>
-	    .codeview {
-	        width:200px;
-	        height:200px;
-	        border:1px solid #ccc;
-	        background:#f5f5f5;
-	        position:relative;
-	    }
-    </style>
 
 </head>
 	
@@ -51,10 +39,8 @@
 			<div class="intro">
 				<h1>Check it out! </h1>
 			</div>
-
-			<div class="codeview language-python" id="code-wrapper" data-language="python"></div>
-
 		</section>
+
 	</section>
 
 	<!-- javascript includes for fullpage.js -->
@@ -65,10 +51,6 @@
 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.slimscroll.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.fullPage.js') }}"></script>
 
-	<!-- javascript for codeflask / prism js --> 
-	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/prism.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/prism-python.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/codeflask.js') }}"></script> 
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -79,15 +61,6 @@
 				autoScrolling: false
 			});
 		});
-
-		var flask = new CodeFlask;
-	    flask.run('#code-wrapper', {
-            language: 'py'
-        });	
-
-	    flask.onUpdate(function(code){
-            console.log(code);
-        });
 
 	</script> 
 
