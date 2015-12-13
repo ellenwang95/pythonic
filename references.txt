@@ -21,3 +21,5 @@ http://www.styleshout.com/free-templates/woo/
 http://www.multipetros.gr/posts/1486-python-syntax-add-on-for-prismjs-highlighter/
 
 http://flask.pocoo.org/snippets/40/
+
+https://github.com/IronSummitMedia/startbootstrap-scrolling-nav ********

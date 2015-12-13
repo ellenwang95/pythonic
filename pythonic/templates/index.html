@@ -1,68 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- css includes -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/jquery.fullPage.css') }}">
+ 	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/bootstrap/bootstrap.min.css') }}">
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/lib/reset.css') }}">
+    <!-- Scrolling CSS https://github.com/IronSummitMedia/startbootstrap-scrolling-nav -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/scrolling-nav.css') }}">
+
+	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/pythonic.css') }}">
+	
+	<style>
+		#editor {
+			position: relative !important;
+	        border: 1px solid lightgray;
+	        margin: auto;
+	        height: 200px;
+	        width: 80%;
+		}
+
+	</style>
 	
 	<title>Pythonic</title>
 
 </head>
-	
-<body> 
-	<nav>
-		<ul id="menu">
-			<li data-menuanchor="home" class="active"><a href="#home">Pythonic</a></li>
-			<li data-menuanchor="about"><a href="#about">About</a></li>
-			<li data-menuanchor="start"><a href="#start">Get Started</a></li>
-		</ul>
-	</nav>
 
-	<section id="fullpage">
-		<section class="section" id="home-section">
-			<div class="intro">
-				<h1>Pythonic</h1>
-				<p>Coding in the "one and only way".</p>
-			</div>
-		</section>
-		<section class="section" id="about-section">
-			<div class="intro">
-				<h1>What will this do for me?</h1>
-				<p>
-					Check if your coding style is "pythonic".
-				</p>
-			</div>
-		</section>
-		<section class="section" id="start-section">
-			<div class="intro">
-				<h1>Check it out! </h1>
-			</div>
-		</section>
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-	</section>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-	<!-- javascript includes for fullpage.js -->
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Pythonic</a>
+            </div>
 
-	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.slimscroll.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.fullPage.js') }}"></script>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#start">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Pythonic</h1>
+                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="start" class="start-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Get Started</h1>
+                </div>
+            </div>
+            <pre id="editor">
+				def myfunction():
+					print "hello world"
+			</pre>
+        </div>
+    </section>
 
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				menu: '#menu',
-				anchors: ['home', 'about', 'start'],
-				sectionsColor: ['#f6f1e9', '#e9eef6', '#f6f1e9'],
-				autoScrolling: false
-			});
-		});
+	<!-- scripts -->
 
-	</script> 
+	 <!-- jQuery -->
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/bootstrap/bootstrap.min.js') }}"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.easing.min.js') }}"></script>
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+
+ 	<!--  ace js -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/ace/ace.js') }}" charset="utf-8"></script>
+	<script>
+	    var editor = ace.edit("editor");
+	    editor.setTheme("ace/theme/monokai");
+	    editor.session.setMode("ace/mode/python");
+	</script>
+
+
 
 </body>
 </html>
