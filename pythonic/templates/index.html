@@ -67,8 +67,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Pythonic</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <p><strong>"Pythonic"</strong> <code>pythonic</code> Write Pythonic Code! </p>
+                    <a class="btn btn-default page-scroll" href="#about">More</a>
                 </div>
             </div>
         </div>
@@ -80,6 +80,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>About</h1>
+                    <a class="btn btn-default page-scroll" href="#start">Get Started!</a>
                 </div>
             </div>
         </div>
@@ -95,9 +96,17 @@
             </div>
         </div>
         <pre id="editor">
-			def myfunction():
-				print "hello world"
+def myfunction():
+	print "hello world"
 		</pre>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Some Tips:</h1>
+                    <p id="response">yo</p>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -115,12 +124,7 @@
 
  	<!--  ace js -->
 	<script type="text/javascript" src="{{ url_for('static', filename='js/lib/ace/ace.js') }}" charset="utf-8"></script>
-	<script>
-	    var editor = ace.edit("editor");
-	    editor.setTheme("ace/theme/monokai");
-	    editor.session.setMode("ace/mode/python");
-	</script>
-
+    <script type="text/javascript" src="{{ url_for('static', filename='js/editor.js') }}" charset="utf-8"></script>
 
 
 </body>
